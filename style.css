@@ -1,0 +1,188 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Cambridge';
+    src: url("./public/fonts/Cambridge.ttf");
+}
+@font-face {
+    font-family: 'Clash-display';
+    src: url("./public/fonts/ClashDisplay-Semibold.otf");
+}
+
+html {
+	font-size: 48px;
+}
+
+.container {
+	width: 100%;
+	padding-bottom: -15px;
+	
+	margin: 0 auto;
+    background: linear-gradient(to bottom,transparent,rgb(255,255,255) rgb(214,219,220));
+	
+	background-repeat: no-repeat;
+	background-blend-mode: multiply; 
+}
+
+section {
+    border-radius: 40px;
+    padding-top: 80px;
+	width: 100%;
+	max-width: 900px;
+	height: 13rem;
+	margin: 0 auto;
+	background: #fff;
+	overflow: hidden;
+}
+
+h1 {
+	position: relative;
+	margin-bottom: 2rem;
+	font-family: 'Clash-display';
+	color: #201a92;
+	font-size: 30px;
+	line-height: .75;
+	letter-spacing: -0.037em;
+	
+}
+
+h1:after {
+	content: 'carson';
+	position: absolute;
+	left: 0;
+    height: 200px;
+    margin-top: -10px;
+	background: url('./public/images/dc-distressed-bg-1.jpg');
+	background-size: cover;
+    align-items: center;
+    justify-items: center;
+    padding-left: 350px;
+	color: rgba(255, 255, 255, 0);
+	mix-blend-mode: hard-light;
+}
+
+b:nth-of-type(1),
+b:nth-of-type(2) {
+	letter-spacing: -0.0442em;
+}
+
+blockquote { /* NB start blockquote lock at 15 px */		
+	padding-left: 2.25rem;
+	padding-right: 1.25rem;
+	font-family: 'courier';
+	color: #26282d;
+	font-weight: 100;
+	font-size: 1.2em;
+	line-height: 1.2;
+}
+
+blockquote:before {
+        content: open-quote;
+  	font-size: 3em;
+  	color: #444;
+  	line-height: 0.1em;
+  	margin-right: 0.1em;
+  	vertical-align: -0.2em;
+}
+
+blockquote:after {
+	content: close-quote;
+  	font-size: 3em;
+  	color: #444;
+  	line-height: 0.7em;
+  	margin-left: 0.1em;
+  	vertical-align: -0.3em;
+}
+button{
+	color: #ececec;
+}
+.banner{
+	font-family: 'courier';
+	width: 100%;
+	background: #201a92;
+	height: 30px;
+	font-size: 0.3em;
+	color: #ececec;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.grid-container { 
+	position: absolute; width: 500vh; height: 65vh; bottom: 0; left: 20%; overflow: hidden; 
+	transform: perspective(200px) rotateX(40deg) scale(1) translateZ(0);
+	transform-origin: bottom;
+	padding: 1px; 
+	-webkit-background-clip: content-box; 
+	-webkit-backface-visibility: hidden;
+	outline: 1px solid transparent; 
+	will-change: transform; 
+}
+
+.grid-line { height: 100%; width: 100%; position: absolute; }
+
+
+.grid-line:before,
+.grid-line:after  { content: ""; display: block; position: absolute; }
+.grid-line:before { height: 5px; width: 100%; background: #201a92; }
+.grid-line:after  { height: 100%; width: 5px; background-image: linear-gradient(transparent, #201a92); }
+
+.grid-line:nth-child(1):before  { top: 0%;  opacity: 0; }
+.grid-line:nth-child(2):before  { top: 10%; opacity: 0; }
+.grid-line:nth-child(3):before  { top: 20%; opacity: .3; }
+.grid-line:nth-child(4):before  { top: 30%; opacity: .4; }
+.grid-line:nth-child(5):before  { top: 40%; opacity: .5; }
+.grid-line:nth-child(6):before  { top: 50%; opacity: .6; }
+.grid-line:nth-child(7):before  { top: 60%; opacity: .7; }
+.grid-line:nth-child(8):before  { top: 70%; opacity: .8; }
+.grid-line:nth-child(9):before  { top: 80%; opacity: .9; }
+.grid-line:nth-child(10):before { top: 90%; opacity: 1; }
+.grid-line:nth-child(11):before { top: calc(100% - 3px); }
+
+
+.grid-line:nth-child(1):after  { left: 0%;  }
+.grid-line:nth-child(2):after  { left: 10%; }
+.grid-line:nth-child(3):after  { left: 20%; }
+.grid-line:nth-child(4):after  { left: 30%; }
+.grid-line:nth-child(5):after  { left: 40%; }
+.grid-line:nth-child(6):after  { left: 50%; }
+.grid-line:nth-child(7):after  { left: 60%; }
+.grid-line:nth-child(8):after  { left: 70%; }
+.grid-line:nth-child(9):after  { left: 80%; }
+.grid-line:nth-child(10):after { left: 90%; }
+.grid-line:nth-child(11):after { left: calc(100% - 3px); }
+/* ----------------------- locks ------------------------*/  
+
+@media (min-width: 900px) {
+
+	.container {
+		padding-top: -100px;
+		margin-top: -200px;
+	}
+			
+	h1 {
+		font-size: 150px;
+        text-align: center;
+		margin-bottom: 0.6em;
+	}
+
+	b:nth-of-type(1),
+	b:nth-of-type(2) {
+		letter-spacing: -19px; 
+	}
+
+	blockquote {
+		font-size: 18.5px;
+	}
+}
+
+@media (min-width: 1176px) {
+	
+    .container {
+		padding-top: 246.5px; 
+	}	
+}
